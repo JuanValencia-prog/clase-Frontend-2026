@@ -1,29 +1,31 @@
-import {ProductCard} from "../components/ProductCard";
-import { products } from "../data/Products";
-import  style from "./ProductList.module.css";
+import { products } from '../data/products';
+import ProductCard from '../components/ProductCard';
+import styles from './ProductList.module.css';
 
 function ProductList() {
-    return (
-        <div className={style.Container }>
-        <header className={style.Header}>
-            <h1 className={style.Title}>Produtos informaticos</h1>
-            <p className={style.subtitle}>
-                Encuentra los mejores productos informaticos al mejor precio
-            </p>
-        </header>
+  return (
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <h1 className={styles.title}>Productos Informáticos</h1>
+        <p className={styles.subtitle}>
+          Encuentra los mejores productos de tecnología para tu setup
+        </p>
+      </header>
 
-        <div className={style.grid}>
-            {products.map((product) => (
-                <ProductCard
-                key={product.id}
-                name={product.name}
-                categoty={product.category}
-                price={product.price}
-                image={product.image}
-                descripcion={product.descripcion}
-                />
-            ))}
-        </div>
-        </div>
-    );
-}   
+      <div className={styles.grid}>
+        {products.map((product) => (
+          <ProductCard
+            key={product.id}
+            name={product.name}
+            category={product.category}
+            price={product.price}
+            image={product.image}
+            description={product.description}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default ProductList;
