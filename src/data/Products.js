@@ -7,7 +7,7 @@ export const products = [{
     category: "audifonos",
     price: 1000000,
     stock: 10,
-    image: "https://smartjohttps://m.media-amazon.com/images/I/B1B6WrGDRTL._CR0,0,4032,2275_SR684,386_.jpgys.co/producto/diadema-inalambrica-airpods-max-3-0-calidad-1-1/?srsltid=AfmBOopoJM2M0VYX3mwGnJzUpprZkmiyo_F1Jl3ihm44KvaHw0O71OC2",
+    image: "https://co.tiendasishop.com/cdn/shop/files/IMG-14858606.jpg?v=1726245857",
     descripcion: "Audifonos apple con cancelacion de ruido",
 },
 {
@@ -25,7 +25,7 @@ export const products = [{
     category: "laptops",
     price: 15000000,
     stock: 5,
-    image: "https://www.clevercel.co/cdn/shohttps://www.apple.com/newsroom/images/product/mac/standard/Apple_new-macbookair-wallpaper-screen_11102020_big.jpg.large.jpgp/files/Portadas_MacBookPro.webp?v=1757093052",
+    image: "https://sm.pcmag.com/pcmag_me/photo/default/macbook-6_hgfm.jpg",
     descripcion: "Macbook Pro con procesador M1",
 },
 {
@@ -34,7 +34,7 @@ export const products = [{
     category: "tablets",
     price: 12000000,
     stock: 8,
-    image: "https://www.clevercel.co/cdn/shohttps://cdsassets.apple.com/live/SZLF0YNV/images/sp/111979_ipad-pro-12-2018.pngp/files/Portadas_iPadPro.webp?v=1757093052",
+    image: "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1666889862-41ZQYdU2yFL._SL500_.jpg?crop=1xw:1xh;center,top&resize=980:*",
     descripcion: "iPad Pro con pantalla de 12.9 pulgadas",
 },
 ];

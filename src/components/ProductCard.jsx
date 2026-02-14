@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import styles from './ProductCard.module.css';
 
-
 function ProductCard({ name, category, price, image, description }) {
   const [likes, setLikes] = useState(0);
   const [isLiked, setIsLiked] = useState(false);
@@ -37,3 +36,4 @@ function ProductCard({ name, category, price, image, description }) {
   );
 }
 
+export default ProductCard;
