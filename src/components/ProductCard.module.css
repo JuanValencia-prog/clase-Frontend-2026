@@ -94,3 +94,9 @@
 .btnLike.liked:hover {
   background: #fecaca;
 }
+
+.productStock {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #374151;
+}

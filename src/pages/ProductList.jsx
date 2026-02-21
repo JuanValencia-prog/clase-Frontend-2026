@@ -1,8 +1,24 @@
+import ProductForm from "../components/ProductForm";
+import { useState } from "react";
 import { products } from '../data/products';
 import ProductCard from '../components/ProductCard';
 import styles from './ProductList.module.css';
 
+
 function ProductList() {
+
+  const handleAddProduct = (product) => {
+  setProductsState((prev) => {
+    const maxId = prev.reduce((acc, item) => Math.max(acc, item.id), 0);
+    const nextId = maxId + 1;
+
+    return [...prev, { ...product, id: nextId }];
+  });
+};
+
+const [productsState, setProductsState] = useState(products);
+
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -12,13 +28,18 @@ function ProductList() {
         </p>
       </header>
 
+      <ProductForm onSubmit={handleAddProduct} />
+
+      
+
       <div className={styles.grid}>
-        {products.map((product) => (
+        {productsState.map((product) => (
           <ProductCard
             key={product.id}
             name={product.name}
             category={product.category}
             price={product.price}
+            stock={product.stock}
             image={product.image}
             description={product.description}
           />
