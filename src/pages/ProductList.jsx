@@ -7,6 +7,29 @@ import styles from './ProductList.module.css';
 
 function ProductList() {
 
+  const [editingProduct, setEditingProduct] = useState(null);
+  const handleEditStart = (product) => {
+  setEditingProduct(product);
+};
+
+const handleEditCancel = () => {
+  setEditingProduct(null);
+};
+
+const handleEditSubmit = (updatedProduct) => {
+  setProductsState((prev) =>
+    prev.map((product) =>
+      product.id === updatedProduct.id ? updatedProduct : product,
+    ),
+  );
+
+  setEditingProduct(null);
+};
+
+  const handleDeleteProduct = (id) => {
+  setProductsState((prev) => prev.filter((product) => product.id !== id));
+};
+
   const handleAddProduct = (product) => {
   setProductsState((prev) => {
     const maxId = prev.reduce((acc, item) => Math.max(acc, item.id), 0);
@@ -42,6 +65,10 @@ const [productsState, setProductsState] = useState(products);
             stock={product.stock}
             image={product.image}
             description={product.description}
+            onDelete={() => handleDeleteProduct(product.id)}
+
+            
+            
           />
         ))}
       </div>
